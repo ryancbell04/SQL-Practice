@@ -19,7 +19,7 @@ From
 Invoice
 
 Where
- BillingCity Like '%B%'
+ DATE(InvoiceDate) > '2010-05-22' AND total < 3.00
  
 Order by
 InvoiceDate
