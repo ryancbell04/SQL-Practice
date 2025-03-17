@@ -7,6 +7,8 @@ Description: Starting practice with SQL using WSDA_Music.db
 Also connected to GitHub, SQL-Practices
 */
 
+-- % Idc what comes next (Wild Card) 
+
 Select
 InvoiceDate,
 BillingAddress,
@@ -17,7 +19,7 @@ From
 Invoice
 
 Where
- total Between 1.98 and 5.00
+ BillingCity Like '%B%'
  
 Order by
 InvoiceDate
