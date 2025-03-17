@@ -8,7 +8,9 @@ Also connected to GitHub, SQL-Practices
 */
 
 
-SELECT FirstName, LastName, Email 
+SELECT FirstName AS [Customer First Name],
+LastName AS [Customer Last Name],
+Email AS [Customer Email]
 FROM Customer
  
 
