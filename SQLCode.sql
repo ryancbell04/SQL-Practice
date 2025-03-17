@@ -7,13 +7,18 @@ Description: Starting practice with SQL using WSDA_Music.db
 Also connected to GitHub, SQL-Practices
 */
 
+Select
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
 
-SELECT FirstName AS [Customer First Name],
-LastName AS [Customer Last Name],
-Email AS [Customer Email]
-FROM Customer
-ORDER BY FirstName ASC, LastName DESC
-LIMIT 10
+From
+Invoice
 
-
+Where
+ total Between 1.98 and 5.00
+ 
+Order by
+InvoiceDate
 
