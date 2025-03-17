@@ -13,14 +13,22 @@ Select
 InvoiceDate,
 BillingAddress,
 BillingCity,
-total
+total,
+CASE
+When total < 2.00 THEN "Baseline Purchase"
+When total Between 2.00 And 6.99 THEN "Low Purchase"
+When total Between 7.00 And 15.00 THEN "Target"
+Else "Top Performer"
+End As PurchaseType
 
 From
 Invoice
 
-Where
- total > 1.98 AND (BillingCity Like 'P%' OR BillingCity Like'D%')
+Where 
+PurchaseType = "Top Performer"
+
+Order By
+BillingCity
  
-Order by
-InvoiceDate
+ 
 
