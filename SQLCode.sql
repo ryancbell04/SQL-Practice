@@ -7,7 +7,7 @@ Description: Starting practice with SQL using WSDA_Music.db
 Also connected to GitHub, SQL-Practices
 */
 
--- % Idc what comes next (Wild Card) 
+-- % Idc what comes next or before (Wild Card) 
 
 Select
 InvoiceDate,
