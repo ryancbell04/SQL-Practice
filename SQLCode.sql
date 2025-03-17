@@ -19,8 +19,7 @@ From
 Invoice
 
 Where
- BillingCity Like 'P%' OR 
- BillingCity Like'D%'
+ total > 1.98 AND (BillingCity Like 'P%' OR BillingCity Like'D%')
  
 Order by
 InvoiceDate
