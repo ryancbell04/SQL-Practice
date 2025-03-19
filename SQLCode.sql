@@ -10,16 +10,10 @@ Also connected to GitHub, SQL-Practices
 -- % Idc what comes next or before (Wild Card)
 
 SELECT
-FirstName,
 LastName,
-Address,
-FirstName || ' ' || LastName || ' ' || Address || ', ' || City || ' ' || State || ' ' || PostalCode AS [Mailing Address],
-LENGTH(PostalCode),
-SUBSTR(PostalCode, 1,5) AS [5 Digit Postal Code],
-upper(FirstName) AS [First Name ALL CAPS],
-lower(LastName) AS [LastName all lowercase]
+FirstName,
+BirthDate,
+strftime('%Y-%m-%d',Birthdate) AS [BirthDate No TimeCode],
+strftime('%Y-%m-%d','now') - strftime('%Y-%m-%d', Birthdate) AS [Age]
 From
-Customer
-Where
-Country = 'USA'
-
+Employee
