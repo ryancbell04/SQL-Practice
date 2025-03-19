@@ -9,11 +9,8 @@ Also connected to GitHub, SQL-Practices
 
 -- % Idc what comes next or before (Wild Card)
 
-
-CREATE VIEW V_AvgTotal AS 
-SELECT
-round(avg(total),2) AS [Average Total]
-From
-Invoice
+INSERT INTO
+Artist(Name)
+VALUES('Bob Marley')
 
 
