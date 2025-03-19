@@ -14,6 +14,8 @@ BillingCity,
 round(AVG(total),2)
 FROM
 Invoice
+WHERE
+BillingCity LIKE 'B%'
 GROUP BY
 BillingCity
 HAVING
