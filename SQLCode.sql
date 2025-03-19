@@ -9,8 +9,10 @@ Also connected to GitHub, SQL-Practices
 
 -- % Idc what comes next or before (Wild Card)
 
-INSERT INTO
-Artist(Name)
-VALUES('Bob Marley')
+UPDATE
+Artist
+SET Name = 'Damien Marley'
+WHERE
+ArtistId = 276
 
 
