@@ -11,7 +11,7 @@ Also connected to GitHub, SQL-Practices
 
 SELECT
 SUM(Total) AS [Total Sales],
-AVG(Total) AS [Average Sales],
+ROUND( AVG(Total),2) AS [Average Sales],
 MAX(Total) AS [Max Sales],
 MIN(Total) AS [Min Sales],
 COUNT(*) AS [Sales Count]
