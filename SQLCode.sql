@@ -8,23 +8,18 @@ Also connected to GitHub, SQL-Practices
 */
 
 -- % Idc what comes next or before (Wild Card)
-
-SELECT
+Select
 InvoiceDate,
 BillingAddress,
 BillingCity
-
-FROM
-Invoice
-
+From Invoice
 Where
-InvoiceDate >
-
+InvoiceDate IN
 (SELECT 
 InvoiceDate
 From
 Invoice
 WHERE 
-InvoiceId = 251)
+InvoiceId IN (251, 252, 254))
 
 
