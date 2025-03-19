@@ -11,14 +11,12 @@ Also connected to GitHub, SQL-Practices
 
 SELECT
 BillingCity,
+BillingCountry,
 round(AVG(total),2)
 FROM
 Invoice
-WHERE
-BillingCity LIKE 'B%'
 GROUP BY
-BillingCity
-HAVING
-avg(total) >5
+BillingCity,
+BillingCountry
 Order By
-BillingCity 
+BillingCountry 
