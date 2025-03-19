@@ -9,26 +9,20 @@ Also connected to GitHub, SQL-Practices
 
 -- % Idc what comes next or before (Wild Card) 
 
-Select
-InvoiceDate,
-BillingAddress,
-BillingCity,
-total,
-CASE
-When total < 2.00 THEN "Baseline Purchase"
-When total Between 2.00 And 6.99 THEN "Low Purchase"
-When total Between 7.00 And 15.00 THEN "Target"
-Else "Top Performer"
-End As PurchaseType
+SELECT 
+c.LastName,
+c.FirstName,
+i.InvoiceId,
+i.CustomerId,
+i.InvoiceDate,
+i.total
 
-From
-Invoice
-
-Where 
-PurchaseType = "Top Performer"
-
-Order By
-BillingCity
- 
+FROM
+Invoice AS i
+INNER JOIN
+Customer AS c
+ON
+i.CustomerId = c.CustomerId
+ORDER BY c.CustomerId
  
 
