@@ -19,7 +19,7 @@ i.total
 
 FROM
 Invoice AS i
-INNER JOIN
+LEFT OUTER JOIN
 Customer AS c
 ON
 i.CustomerId = c.CustomerId
