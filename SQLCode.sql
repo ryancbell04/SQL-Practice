@@ -16,5 +16,7 @@ FROM
 Invoice
 GROUP BY
 BillingCity
+HAVING
+avg(total) >5
 Order By
 BillingCity 
