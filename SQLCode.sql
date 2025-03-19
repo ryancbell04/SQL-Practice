@@ -15,7 +15,9 @@ LastName,
 Address,
 FirstName || ' ' || LastName || ' ' || Address || ', ' || City || ' ' || State || ' ' || PostalCode AS [Mailing Address],
 LENGTH(PostalCode),
-SUBSTR(PostalCode, 1,5) AS [5 Digit Postal Code]
+SUBSTR(PostalCode, 1,5) AS [5 Digit Postal Code],
+upper(FirstName) AS [First Name ALL CAPS],
+lower(LastName) AS [LastName all lowercase]
 From
 Customer
 Where
