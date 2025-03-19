@@ -9,16 +9,22 @@ Also connected to GitHub, SQL-Practices
 
 -- % Idc what comes next or before (Wild Card)
 
-Select
-BillingCity,
-avg(total) AS [City Avg],
-(SELECT avg(total) from Invoice) AS [Global Avg]
+SELECT
+InvoiceDate,
+BillingAddress,
+BillingCity
 
 FROM
 Invoice
-Group By
-BillingCity
-Order By
-BillingCity
+
+Where
+InvoiceDate >
+
+(SELECT 
+InvoiceDate
+From
+Invoice
+WHERE 
+InvoiceId = 251)
 
 
