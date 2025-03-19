@@ -8,22 +8,12 @@ Also connected to GitHub, SQL-Practices
 */
 
 -- % Idc what comes next or before (Wild Card)
-SELECT
-TrackId,
-Composer
-Name
-From
-Track
-Where 
-TrackId
-NOT IN
 
-(SELECT
-DISTINCT
-TrackId
+
+CREATE VIEW V_AvgTotal AS 
+SELECT
+round(avg(total),2) AS [Average Total]
 From
-InvoiceLine
-Order By
-TrackId)
+Invoice
 
 
