@@ -10,10 +10,11 @@ Also connected to GitHub, SQL-Practices
 -- % Idc what comes next or before (Wild Card)
 
 SELECT
-SUM(Total) AS [Total Sales],
-ROUND( AVG(Total),2) AS [Average Sales],
-MAX(Total) AS [Max Sales],
-MIN(Total) AS [Min Sales],
-COUNT(*) AS [Sales Count]
+BillingCity,
+round(AVG(total),2)
 FROM
-invoice
+Invoice
+GROUP BY
+BillingCity
+Order By
+BillingCity 
