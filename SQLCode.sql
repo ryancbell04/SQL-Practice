@@ -9,20 +9,26 @@ Also connected to GitHub, SQL-Practices
 
 -- % Idc what comes next or before (Wild Card) 
 
-SELECT 
-c.LastName,
+Select
+e.FirstName,
+e.LastName,
+e.EmployeeId,
 c.FirstName,
-i.InvoiceId,
+c.LastName,
+c.SupportRepId,
 i.CustomerId,
-i.InvoiceDate,
 i.total
-
-FROM
-Invoice AS i
-RIGHT OUTER JOIN
+From
+invoice AS i
+Inner Join
 Customer AS c
-ON
+On
 i.CustomerId = c.CustomerId
-ORDER BY c.CustomerId
- 
+Inner Join
+Employee AS e
+On
+c.SupportRepId = e.EmployeeId
+Order By
+i.total DESC
+LIMIT 10
 
