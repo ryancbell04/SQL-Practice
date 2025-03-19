@@ -10,13 +10,15 @@ Also connected to GitHub, SQL-Practices
 -- % Idc what comes next or before (Wild Card)
 
 SELECT
+InvoiceDate,
+BillingAddress,
 BillingCity,
-BillingCountry,
-round(AVG(total),2)
-FROM
-Invoice
-GROUP BY
-BillingCity,
-BillingCountry
+total
+FROM INVOICE
+WHERE
+total <
+(select round(avg(total),2) from Invoice)
 Order By
-BillingCountry 
+total DESC
+
+
