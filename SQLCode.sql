@@ -8,18 +8,22 @@ Also connected to GitHub, SQL-Practices
 */
 
 -- % Idc what comes next or before (Wild Card)
-Select
-InvoiceDate,
-BillingAddress,
-BillingCity
-From Invoice
-Where
-InvoiceDate IN
-(SELECT 
-InvoiceDate
+SELECT
+TrackId,
+Composer
+Name
 From
-Invoice
-WHERE 
-InvoiceId IN (251, 252, 254))
+Track
+Where 
+TrackId
+NOT IN
+
+(SELECT
+DISTINCT
+TrackId
+From
+InvoiceLine
+Order By
+TrackId)
 
 
