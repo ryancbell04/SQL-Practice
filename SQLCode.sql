@@ -10,10 +10,10 @@ Also connected to GitHub, SQL-Practices
 -- % Idc what comes next or before (Wild Card)
 
 SELECT
-LastName,
-FirstName,
-BirthDate,
-strftime('%Y-%m-%d',Birthdate) AS [BirthDate No TimeCode],
-strftime('%Y-%m-%d','now') - strftime('%Y-%m-%d', Birthdate) AS [Age]
-From
-Employee
+SUM(Total) AS [Total Sales],
+AVG(Total) AS [Average Sales],
+MAX(Total) AS [Max Sales],
+MIN(Total) AS [Min Sales],
+COUNT(*) AS [Sales Count]
+FROM
+invoice
