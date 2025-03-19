@@ -9,9 +9,8 @@ Also connected to GitHub, SQL-Practices
 
 -- % Idc what comes next or before (Wild Card)
 
-UPDATE
+DELETE FROM
 Artist
-SET Name = 'Damien Marley'
 WHERE
 ArtistId = 276
 
